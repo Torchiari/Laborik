@@ -2,9 +2,9 @@ import "./globals.css"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import type { ReactNode } from "react"
-import { Raleway } from "next/font/google"
+import { Poppins } from "next/font/google"
 
-const raleway = Raleway({ subsets: ["latin"], weight: ["400","200", "700"] })
+const poppins = Poppins({ subsets: ["latin"], weight: ["400","200", "700"] })
 
 export const metadata = {
   title: "Laborik",
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
-      <body className={`${raleway.className} bg-[#0b1220] text-white`}>
+      <body className={`${poppins.className} bg-[#0b1220] text-white`}>
         <Navbar />
         {children}
         <Footer />

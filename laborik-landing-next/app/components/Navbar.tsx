@@ -16,7 +16,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const handleSetActive = (section) => {
+  const handleSetActive = (section: string) => {
     setActive(section)
     setOpen(false)
   }
@@ -29,15 +29,18 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between text-white font-semibold">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2" onClick={() => handleSetActive("hero")}>
+        <a
+          href="#hero"
+          className="flex items-center gap-2"
+          onClick={() => handleSetActive("hero")}
+        >
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             alt="Logo"
-            width={scrolled ? 40 : 55}
-            height={scrolled ? 40 : 55}
-            className="rounded-full transition-all duration-300 cursor-pointer"
+            width={scrolled ? 100 : 180}
+            height={scrolled ? 100 : 180}
+            className="transition-all duration-300 cursor-pointer"
           />
-          <span className="text-xl tracking-wide">LABORIK</span>
         </a>
 
         {/* Links desktop */}
@@ -51,9 +54,9 @@ export default function Navbar() {
               <a
                 href={`#${item.id}`}
                 onClick={() => handleSetActive(item.id)}
-                className={`relative transition-all duration-200 hover:text-[#ff7b00] ${
-                    active === item.id ? "text-[#ff7b00]" : "text-white"
-                } after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0  after:bg-[#ff7b00] hover:after:w-full after:transition-all ${
+                className={`relative transition-all duration-200 hover:text-[#ff6600] ${
+                  active === item.id ? "text-[#ff6600]" : "text-white"
+                } after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#ff6600] hover:after:w-full after:transition-all ${
                   active === item.id ? "after:w-full" : "after:w-0"
                 }`}
               >
@@ -83,8 +86,8 @@ export default function Navbar() {
                 <a
                   href={`#${item.id}`}
                   onClick={() => handleSetActive(item.id)}
-                  className={`hover:text-[#ff7b00] ${
-                    active === item.id ? "text-[#ff7b00]" : "text-white"
+                  className={`hover:text-[#ff6600] ${
+                    active === item.id ? "text-[#ff6600]" : "text-white"
                   }`}
                 >
                   {item.label}
