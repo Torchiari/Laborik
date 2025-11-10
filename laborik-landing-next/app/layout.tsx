@@ -7,14 +7,14 @@ import { Poppins } from "next/font/google"
 const poppins = Poppins({ subsets: ["latin"], weight: ["400","200", "700"] })
 
 export const metadata = {
-  title: "Laborik",
-  description: "Landing page de la tienda con catálogo, reseñas y contacto.",
+  title: "UNIFORM.AR",
+  description: "Indumentaria de trabajo y uniformes.",
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
-      <body className={`${poppins.className} bg-[#0b1220] text-white`}>
+      <body className={`${poppins.className} bg-[#F8F5F0] text-[#6B4A52]`}>
         <Navbar />
         {children}
         <Footer />
