@@ -6,6 +6,7 @@ import Contact from "./components/Contact"
 export default function HomePage() {
   return (
     <main className="pt-20">
+    
       <Hero />
       <Catalog />
       {/* <Reviews /> */}
