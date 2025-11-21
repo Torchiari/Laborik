@@ -5,30 +5,49 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="bg-[#F8F5F0] text-[#6B4A52] dark:bg-[#2e1f27] dark:text-[#F5EEF7] w-full py-24 md:py-28 mt-16 transition-all duration-500"
+      className="relative w-full h-[90vh] flex items-center justify-center text-center"
     >
-      <div className="max-w-[1250px] mx-auto flex flex-col md:flex-row items-center justify-between px-8 lg:px-24 gap-20">
-        <div className="md:w-[55%] space-y-7 text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-[3.3rem] font-extrabold leading-[1.15] tracking-tight font-sans">
-            Indumentaria de trabajo y uniformes
-          </h1>
 
-          <p className="text-[#6B4A52]/80 dark:text-[#E9D7E9] text-base sm:text-lg lg:text-[1.15rem] font-normal leading-relaxed max-w-md mx-auto md:mx-0">
-            Brindamos indumentaria laboral de alta calidad y distribuimos una amplia línea de calzados de seguridad.
-            Ofrecemos atención personalizada y un servicio integral para empresas y distribuidores de todo el país.
-          </p>
+      {/* Imagen de fondo */}
+      <Image
+        src="/fondo.jpg"
+        alt="Fondo"
+        fill
+        priority
+        className="object-cover brightness-75"
+      />
 
+      {/* Overlay oscuro */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* Contenido */}
+      <div className="relative z-10 max-w-3xl mx-auto px-6 flex flex-col items-center gap-6 text-white">
+
+        <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight drop-shadow-xl">
+          Indumentaria de trabajo y uniformes
+        </h1>
+
+        <p className="text-lg sm:text-xl font-light max-w-2xl drop-shadow-md">
+          Brindamos indumentaria laboral de alta calidad y distribuimos una amplia
+          línea de calzados de seguridad. Ofrecemos atención personalizada y un servicio
+          integral para empresas y distribuidores de todo el país.
+        </p>
+
+        {/* Botones */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+
+          {/* Whatsapp (estilo violeta original) */}
           <a
-            href="https://wa.me/541100000000?text=Hola!%20Quisiera%20hacer%20una%20consulta"
+            href="https://wa.me/+5491138005433?text=Hola!%20Quisiera%20hacer%20una%20consulta"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#6B4A52] dark:bg-[#745968] text-[#F8F5F0] dark:text-white px-8 py-3 rounded-md text-base sm:text-lg font-semibold shadow-md hover:bg-[#5D3F47] dark:hover:bg-[#5a4358] hover:shadow-lg transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-[#6B4A52] text-[#F8F5F0] px-8 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-[#5D3F47] hover:shadow-lg transition-all duration-300"
           >
             {/* Ícono WhatsApp blanco */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width="22"
+              height="22"
               viewBox="0 0 24 24"
               fill="currentColor"
               className="text-white"
@@ -39,25 +58,27 @@ export default function Hero() {
             Contactanos por WhatsApp
           </a>
 
-        </div>
+          {/* Descargar catálogo (mismo estilo + ícono) */}
+          <a
+            href="/catalogo.pdf"
+            download
+            className="inline-flex items-center gap-2 bg-[#6B4A52] text-[#F8F5F0] px-8 py-3 rounded-md text-lg font-semibold shadow-md hover:bg-[#5D3F47] hover:shadow-lg transition-all duration-300"
+          >
+            {/* Ícono de catálogo */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              className="text-white"
+            >
+              <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM8 12h8v2H8v-2zm0 4h5v2H8v-2z" />
+            </svg>
 
-        <div className="hidden md:flex md:w-[45%] justify-center">
-          <div className="relative w-[440px] h-[440px]">
-            {/* Imagen modo claro */}
-            <Image
-              src="/hero-image.png"
-              alt="Indumentaria personalizada"
-              fill
-              className="object-cover rounded-xl shadow-2xl border border-[#6B4A52]/30 dark:hidden"
-            />
-            {/* Imagen modo oscuro */}
-            <Image
-              src="/hero-black.png"
-              alt="Indumentaria personalizada (oscuro)"
-              fill
-              className="object-cover rounded-xl shadow-2xl border border-[#745968]/40 hidden dark:block"
-            />
-          </div>
+            Descargar catálogo
+          </a>
+
         </div>
       </div>
     </section>

@@ -80,9 +80,10 @@ export default function Contact() {
     "Remeras y Chombas",
     "Pantalones de trabajo",
     "Camperas y Buzos",
+    "Camisas",
     "Chalecos de seguridad",
     "Overoles",
-    "Gorras y Guantes",
+    "Accesorios",
     "Equipamiento completo",
   ]
 

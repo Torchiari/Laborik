@@ -50,7 +50,7 @@ export default function Footer() {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/5491112345678"
+              href="https://wa.me/+5491138005433"
               target="_blank"
               className="text-[#EDE8E3] hover:text-[#9A7383] transition-colors"
               aria-label="WhatsApp"
